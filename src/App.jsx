@@ -1,5 +1,6 @@
 import { useState, useRef } from 'react'
-
+import EditIcon from './assets/images/edit.png'
+import deleteIcon from './assets/images/delete.png'
 import './App.css'
 import { Edit } from '../components/edit.jsx';
 
@@ -94,8 +95,8 @@ function App() {
                   </span>
                 </div>
 
-                <div className='edit' ><img onClick={() => showEdit(key)} src="/src/assets/images/edit.png" alt="" /></div>
-                <div className='delete'><img onClick={() => deleteTask(key.id)} src="/src/assets/images/delete.png" alt="" /></div>
+                <div className='edit' ><img onClick={() => showEdit(key)} src={EditIcon} alt="" /></div>
+                <div className='delete'><img onClick={() => deleteTask(key.id)} src={deleteIcon} alt="" /></div>
               </div>
               )
             })}
