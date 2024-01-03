@@ -10,13 +10,16 @@ export const Edit = ({ data, setTodo, modal }) => {
     const storedata = () => {
         setTodo((prev) => {
             return prev.map((value) => {
-                if (data.id == value.id) {
-                    return { ...prev, task: editdata }
+                if (data.id === value.id) {
+                    return { ...value, task: editdata };
                 }
-            })
-        })
-        modal()
+                return value;
+            });
+        });
+
+        modal();
     }
+
 
     //cancel modal 
     const cancel = () => {

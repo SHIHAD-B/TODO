@@ -60,6 +60,7 @@ function App() {
 
   //delete task
   const deleteTask = (taskid) => {
+
     setTodo(todo.filter((task) => taskid !== task.id))
   }
 
